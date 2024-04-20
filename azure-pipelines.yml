@@ -7,7 +7,9 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  name : "EEM Infrastructure Team"
+  demands:
+  - agent.name -equals gka-vm-ap-lx1
 
 steps:
 - task: Gradle@2
